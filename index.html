@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+</head>
+<body>
+  <h2>Calculadora</h2>
+
+  <input type="number" id="n1" min="-99999" max="99999" step="1" placeholder="Numero 1">
+
+  <select id="op">
+    <option value="suma">Suma</option>
+    <option value="resta">Resta</option>
+    <option value="multiplicacion">Multiplicacion</option>
+    <option value="potencia">Potencia</option>
+  </select>
+
+  <input type="number" id="n2" min="-99999" max="99999" step="1" placeholder="Numero 2">
+
+  <button type="button" onclick="calcular()">Calcular</button>
+
+  <p id="salida"></p>
+
+  <script>
+    function calcular() {
+      const n1 = Number(document.getElementById("n1").value);
+      const n2 = Number(document.getElementById("n2").value);
+      const op = document.getElementById("op").value;
+      const salida = document.getElementById("salida");
+
+      // Revisar que sean enteros y esten en el rango pedido
+      if (!Number.isInteger(n1) || !Number.isInteger(n2)) {
+        salida.textContent = "Pon numeros enteros";
+        return;
+      }
+
+      if (n1 < -99999 || n1 > 99999 || n2 < -99999 || n2 > 99999) {
+        salida.textContent = "Los numeros deben ir de -99999 a 99999";
+        return;
+      }
+
+      let resultado;
+      if (op === "suma") {
+        resultado = n1 + n2;
+      } else if (op === "resta") {
+        resultado = n1 - n2;
+      } else if (op === "multiplicacion") {
+        resultado = n1 * n2;
+      } else if (op === "potencia") {
+        if (n2 < 0) {
+          salida.textContent = "El exponente no puede ser negativo";
+          return;
+        }
+        resultado = 1;
+        for (let i = 0; i < n2; i++) {
+          resultado = resultado * n1;
+        }
+      }
+
+      salida.textContent = "Resultado: " + resultado;
+    }
+  </script>
+</body>
+</html>
