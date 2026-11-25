@@ -41,34 +41,34 @@ fatal: unable to auto-detect email address (got 'manur@PC_YUKI.(none)')"
 
   Por lo que tuve que aplicar los siguientes comandos\
 
-3.1. Ingresar mi usuario y mail de Git:
-      `git config --global user.name manuela-romero-dev`
+3.1. Ingresar mi usuario y mail de Git:\
+      `git config --global user.name manuela-romero-dev`\
       `git config --global user.email manu.romero.004@gmail.com`
       
   4. Guardar los cambios de Calculadora.java y hacer commit:\
-      `git add Calculadora.java`
+      `git add Calculadora.java`\
       `git commit -m "añado calculadora en java"`
   
   5. Volver a main y crear la rama frontend para el html:\
-      `git checkout main`
+      `git checkout main`\
       `git checkout -b frontend`
   
   6. Guardar el index.html y hacer commit:\
-      `git add index.html`
+      `git add index.html`\
       `git commit -m "añado index.html"`
   
   7. Volver a main y hacer merge de las dos ramas:\
-      `git checkout main`
-      `git merge backend`
+      `git checkout main`\
+      `git merge backend`\
       `git merge frontend`
   
   8. Subir las ramas a GitHub:\
-      `git push -u origin main`
-      `git push -u origin backend`
+      `git push -u origin main`\
+      `git push -u origin backend`\
       `git push -u origin frontend`
 
 9. Actualizar `README.md` en `main` con los comandos y subir el cambio:\
-    `git add README.md`
-    `git commit -m "actualizo README con comandos en orden"`
-    `git push -u origin main`
+    `git add README.md`\
+    `git commit -m "actualizo README con comandos en orden"`\
+    `git push -u origin main`\
    
