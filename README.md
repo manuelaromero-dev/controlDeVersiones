@@ -66,13 +66,9 @@ fatal: unable to auto-detect email address (got 'manur@PC_YUKI.(none)')"
       `git push -u origin main`
       `git push -u origin backend`
       `git push -u origin frontend`
-      
- 9. Subir las ramas a GitHub:
-   `git push -u origin main`
-   `git push -u origin backend`
-   `git push -u origin frontend`
 
-10. Actualizar `README.md` en `main` con los comandos y subir el cambio:
+9. Actualizar `README.md` en `main` con los comandos y subir el cambio:\
     `git add README.md`
     `git commit -m "actualizo README con comandos en orden"`
-    `git push origin main` 
+    `git push -u origin main`
+   
